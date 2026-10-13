@@ -1,0 +1,38 @@
+# Entorno de prueba Laravel — instalación limpia, sin datos sensibles reales.
+# Uso: docker compose up -d --build   (sitio en http://localhost:8083)
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: test-root-pw
+      MARIADB_DATABASE: laravel
+      MARIADB_USER: laravel
+      MARIADB_PASSWORD: test-lv-pw
+    volumes:
+      - lv_db_data:/var/lib/mysql
+
+  laravel:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:8083:80"
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_DATABASE: laravel
+      DB_USERNAME: laravel
+      DB_PASSWORD: test-lv-pw
+      LAB_DB_HOST: db
+      LAB_DB_NAME: laravel
+      LAB_DB_USER: laravel
+      LAB_DB_PASSWORD: test-lv-pw
+    volumes:
+      - ../lab/scanner_case.php:/var/www/html/public/scanner-vulnerable.php:ro
+      - ../lab/scanner_case.php:/var/www/html/public/scanner-safe.php:ro
+
+volumes:
+  lv_db_data:

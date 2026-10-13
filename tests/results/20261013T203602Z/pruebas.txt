@@ -1,0 +1,32 @@
+﻿....................                                                     [100%]
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.12.0-final-0 _______________
+
+Name                                      Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------
+src\scanner\__init__.py                       1      0   100%
+src\scanner\__main__.py                       4      4     0%   1-6
+src\scanner\cli.py                           36      5    86%   41, 44-46, 56
+src\scanner\core\__init__.py                  0      0   100%
+src\scanner\core\findings.py                 35      0   100%
+src\scanner\core\http_client.py              33      2    94%   31, 35
+src\scanner\core\metrics.py                  23      4    83%   37, 40-43
+src\scanner\core\targets.py                  23      3    87%   11, 30, 32
+src\scanner\modules\__init__.py               0      0   100%
+src\scanner\modules\cms\__init__.py           2      0   100%
+src\scanner\modules\cms\profiler.py          25      0   100%
+src\scanner\modules\headers\__init__.py       0      0   100%
+src\scanner\modules\headers\scanner.py       20      1    95%   30
+src\scanner\modules\recon\__init__.py         2      0   100%
+src\scanner\modules\recon\scanner.py         16      0   100%
+src\scanner\modules\recon\signatures.py      37      5    86%   33, 35, 45, 47, 55
+src\scanner\modules\sqli\__init__.py          0      0   100%
+src\scanner\modules\sqli\scanner.py          27      0   100%
+src\scanner\modules\xss\__init__.py           0      0   100%
+src\scanner\modules\xss\scanner.py           26      0   100%
+src\scanner\reporting\__init__.py             0      0   100%
+src\scanner\reporting\render.py              22      5    77%   22, 25-27, 33
+src\scanner\scan.py                          39      2    95%   24, 35
+-----------------------------------------------------------------------
+TOTAL                                       371     31    92%
+20 passed in 24.83s

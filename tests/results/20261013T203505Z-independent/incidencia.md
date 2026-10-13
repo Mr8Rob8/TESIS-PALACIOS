@@ -1,0 +1,1 @@
+﻿Piloto excluido: el negativo JSON serializaba las comillas del marcador; la prueba no tensionaba el detector. El fixture se sustituyó por una respuesta text/plain que conserva el marcador literal. No usar estas cifras en el manuscrito.

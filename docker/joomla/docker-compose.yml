@@ -1,0 +1,43 @@
+# Entorno de prueba Joomla — instalación limpia, sin datos sensibles reales.
+# Uso: docker compose up -d   (sitio en http://localhost:8082)
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: test-root-pw
+      MARIADB_DATABASE: joomla
+      MARIADB_USER: joomla
+      MARIADB_PASSWORD: test-jm-pw
+    volumes:
+      - jm_db_data:/var/lib/mysql
+
+  joomla:
+    image: joomla:4-apache
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:8082:80"
+    environment:
+      JOOMLA_DB_HOST: db
+      JOOMLA_DB_NAME: joomla
+      JOOMLA_DB_USER: joomla
+      JOOMLA_DB_PASSWORD: test-jm-pw
+      JOOMLA_SITE_NAME: Scanner Lab Joomla
+      JOOMLA_ADMIN_USER: Local Test Admin
+      JOOMLA_ADMIN_USERNAME: labadmin
+      JOOMLA_ADMIN_PASSWORD: local-test-only-pass-2026
+      JOOMLA_ADMIN_EMAIL: labadmin@example.invalid
+      LAB_DB_HOST: db
+      LAB_DB_NAME: joomla
+      LAB_DB_USER: joomla
+      LAB_DB_PASSWORD: test-jm-pw
+    volumes:
+      - jm_data:/var/www/html
+      - ../lab/scanner_case.php:/var/www/html/scanner-vulnerable.php:ro
+      - ../lab/scanner_case.php:/var/www/html/scanner-safe.php:ro
+
+volumes:
+  jm_db_data:
+  jm_data:

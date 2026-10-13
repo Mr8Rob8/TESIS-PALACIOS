@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Este repo se probó con Python 3.12 vía venv (.venv/) porque el Python 3.14
+# instalado como default en esta máquina aún no tiene wheels de lxml.
+# poetry install debería usar 3.9-3.12 hasta que eso cambie.
+
+# Docker
+docker/**/wp-content/uploads/
+docker/**/*.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Resultados crudos de pruebas (Sprint 5) — pueden ser voluminosos
+tests/results/*.json
+tests/results/*.csv
+
+# Copia anidada de trabajo con su propio .git; no agregarla como submódulo.
+/TESIS/
+
+# Renders y perfiles temporales de la revisión Word/PDF.
+/docs/qa/lo-*/
+/docs/qa/render*/
+/docs/qa/tutor-render*/
+/docs/qa/tutor-final/pages/
+/docs/qa/com-prueba.docx
+/docs/qa/~$*
+/docs/qa/tutor_*.md
+/docs/qa/*.txt
+/docs/~$*

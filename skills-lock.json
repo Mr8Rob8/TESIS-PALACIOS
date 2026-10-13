@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "bib-search-citation": {
+      "source": "bahayonghang/academic-writing-skills",
+      "sourceType": "github",
+      "skillPath": "academic-writing-skills/bib-search-citation/SKILL.md",
+      "computedHash": "f23e27ff2ae000635cded7a111b0c7d7b420ec836cdad587c242e9e3ebf5ba83"
+    }
+  }
+}

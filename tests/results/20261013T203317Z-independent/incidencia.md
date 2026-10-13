@@ -1,0 +1,1 @@
+﻿Piloto excluido: el caso xss-inert-json usaba un elemento script HTML con entrada capaz de cerrar la etiqueta; no era un negativo inequívoco de XSS. Se corrigió el fixture para responder application/json y se ejecutó un nuevo conjunto separado. No usar estas cifras en el manuscrito.

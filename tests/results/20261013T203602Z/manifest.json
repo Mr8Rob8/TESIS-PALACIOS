@@ -1,0 +1,123 @@
+{
+  "fecha_utc": "2026-10-13T20:36:03.195226+00:00",
+  "repeticiones_por_caso": 5,
+  "unidad": "caso por código de señal; repeticiones para estabilidad y distribución de recursos",
+  "voto": "mayoría estricta de las repeticiones por caso y código, predefinido",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "plataforma": "Windows-11-10.0.26200-SP0",
+  "paquetes": {
+    "requests": "2.34.2",
+    "scanner": "0.1.0"
+  },
+  "medida_memoria": "PeakWorkingSetSize del proceso en Windows; ru_maxrss en POSIX, convertida a bytes",
+  "medida_tiempo": "perf_counter desde antes de GET inicial hasta fin de módulos; no incluye arranque de Python ni serialización",
+  "casos": [
+    {
+      "id": "wordpress-vulnerable",
+      "tipo": "seguridad",
+      "url": "http://127.0.0.1:8081/scanner-vulnerable.php?q=hola",
+      "esperados": [
+        "XSS-REFLEJO-INDICATIVO",
+        "SQLI-ERROR-INDICATIVO",
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF"
+      ]
+    },
+    {
+      "id": "wordpress-seguro",
+      "tipo": "seguridad",
+      "url": "http://127.0.0.1:8081/scanner-safe.php?q=hola",
+      "esperados": []
+    },
+    {
+      "id": "wordpress-cms",
+      "tipo": "cms",
+      "url": "http://127.0.0.1:8081/",
+      "cms_esperado": "WordPress"
+    },
+    {
+      "id": "joomla-vulnerable",
+      "tipo": "seguridad",
+      "url": "http://127.0.0.1:8082/scanner-vulnerable.php?q=hola",
+      "esperados": [
+        "XSS-REFLEJO-INDICATIVO",
+        "SQLI-ERROR-INDICATIVO",
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF"
+      ]
+    },
+    {
+      "id": "joomla-seguro",
+      "tipo": "seguridad",
+      "url": "http://127.0.0.1:8082/scanner-safe.php?q=hola",
+      "esperados": []
+    },
+    {
+      "id": "joomla-cms",
+      "tipo": "cms",
+      "url": "http://127.0.0.1:8082/",
+      "cms_esperado": "Joomla"
+    },
+    {
+      "id": "laravel-vulnerable",
+      "tipo": "seguridad",
+      "url": "http://127.0.0.1:8083/scanner-vulnerable.php?q=hola",
+      "esperados": [
+        "XSS-REFLEJO-INDICATIVO",
+        "SQLI-ERROR-INDICATIVO",
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF"
+      ]
+    },
+    {
+      "id": "laravel-seguro",
+      "tipo": "seguridad",
+      "url": "http://127.0.0.1:8083/scanner-safe.php?q=hola",
+      "esperados": []
+    },
+    {
+      "id": "laravel-cms",
+      "tipo": "cms",
+      "url": "http://127.0.0.1:8083/",
+      "cms_esperado": "Laravel"
+    }
+  ],
+  "sha256_fuentes": {
+    "src\\scanner\\__init__.py": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+    "src\\scanner\\__main__.py": "3f3be04ee817caa1ab76c15cd129199fcfdf79c7e84aa8b370b4be44e7a030b4",
+    "src\\scanner\\cli.py": "c8fca5da95ae0b8e6ca53dfc298e2617251ddaae0a4a17538aa55654f5f4bdaf",
+    "src\\scanner\\core\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\scanner\\core\\findings.py": "c3db55b90b520f819752d4eeea7fbc069fb8e03052257f2b3479c7336ea40a61",
+    "src\\scanner\\core\\http_client.py": "40b9c9a85633bd20d20f78336ab603d6a317b011d69bc738cb0a8ee235967591",
+    "src\\scanner\\core\\metrics.py": "fa0d6cf9daac2531faa0982b9acd2768ebbb8e44478f6044fc175479c3dad65f",
+    "src\\scanner\\core\\targets.py": "77fdd00c307833b022e9fc90651c9bfba5dd3c9ad9c6e6de25575cfd39054721",
+    "src\\scanner\\modules\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\scanner\\modules\\cms\\__init__.py": "9ddc6d7a37e1bba6423cf7f0825b618ec3671b3f5bed371e38e35ca46c794220",
+    "src\\scanner\\modules\\cms\\profiler.py": "5a48837907dfb38db0868786d2ca3431f92bfc11dbc7c71b7e87cca5ffe9258e",
+    "src\\scanner\\modules\\headers\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\scanner\\modules\\headers\\scanner.py": "8738c400b0cd524e098c84c59e7e82ea24f7a5ddf25ea2dc92f4ac656b4115aa",
+    "src\\scanner\\modules\\recon\\__init__.py": "ac4447cb7c671642c1c27acedf8f9cdb4bacf050f2070cb870e31ac07d83826f",
+    "src\\scanner\\modules\\recon\\scanner.py": "023fec6e2bcd19ff51a93b12c401dd9d47bcce1b37dd710dce02f7938f88824e",
+    "src\\scanner\\modules\\recon\\signatures.py": "b50edb61534d1aa24a0763cd2a168d440020db7756c2570d16d133e3bfb77102",
+    "src\\scanner\\modules\\sqli\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\scanner\\modules\\sqli\\scanner.py": "ef73de05a0c6210fa92aaa0fefca1dc9a5200fb28b3653b5edff13b149b49248",
+    "src\\scanner\\modules\\xss\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\scanner\\modules\\xss\\scanner.py": "650a6c39426fa251cd04fb9e80bda54b66dd8fb1c539cee7678a583a5b0f95e9",
+    "src\\scanner\\reporting\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\scanner\\reporting\\render.py": "9fda6abdb368e01b50ce6fc23840794f51d48dc15b769d892fc1c6ee3339501e",
+    "src\\scanner\\scan.py": "1c3747a628d9fe819b24836312d776221379bb22c287a44d3f6979cb8a66535f"
+  },
+  "sha256_laboratorio": "90929ad0013fdb46a80357ea36d959466b04bfb3ec978dd773a2465c40098ade",
+  "sha256_compose": {
+    "wordpress": "23196d8339550ee841f4ab304db0faeaaaac9326dbd7341ba82b1d7624aff7d3",
+    "joomla": "24d2e6babc59430c4537713a1768805682436f94b33d5530164025dbee7c288e",
+    "laravel": "51188586a3254d10109d6acce68f773870b2bdd2635b71f1cd4d7d616a9b9121"
+  },
+  "sha256_experimento": {
+    "run_docker.py": "ee53694dc506012b587373f54208d4b26d17990bc4f16c7fea7b9948298a8212",
+    "analyze_docker.py": "038d277cd1d94a360f14bb8f6c96776ae14b738f660f7f1a1e973f477b12b8e3"
+  }
+}

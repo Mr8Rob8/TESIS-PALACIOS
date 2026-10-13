@@ -1,0 +1,38 @@
+# Entorno de prueba WordPress — instalación limpia, sin datos sensibles reales.
+# Uso: docker compose up -d   (sitio en http://localhost:8081)
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: test-root-pw
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: test-wp-pw
+    volumes:
+      - wp_db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:6.4-apache
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:8081:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: test-wp-pw
+      LAB_DB_HOST: db
+      LAB_DB_NAME: wordpress
+      LAB_DB_USER: wordpress
+      LAB_DB_PASSWORD: test-wp-pw
+    volumes:
+      - wp_data:/var/www/html
+      - ../lab/scanner_case.php:/var/www/html/scanner-vulnerable.php:ro
+      - ../lab/scanner_case.php:/var/www/html/scanner-safe.php:ro
+
+volumes:
+  wp_db_data:
+  wp_data:

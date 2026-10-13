@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "scanner"
+version = "0.1.0"
+description = "Escaner ligero OWASP para PYMEs peruanas (WordPress, Joomla, Laravel)"
+authors = ["Emerson Palacios Calle"]
+readme = "README.md"
+packages = [{ include = "scanner", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31"
+aiohttp = "^3.9"
+beautifulsoup4 = "^4.12"
+lxml = "^5.1"
+colorama = "^0.4.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest-cov = "^4.1"
+
+[tool.poetry.scripts]
+scanner = "scanner.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/scanner"]

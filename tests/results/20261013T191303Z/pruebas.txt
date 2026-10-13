@@ -1,0 +1,5 @@
+Comando: .venv\Scripts\python.exe -m pytest --cov=scanner --cov-report=term-missing -q
+Fecha: 2026-10-13, después de las corridas Docker; Python 3.12.0 en Windows.
+Resultado: 19 passed in 21.99s; 0 skipped; cobertura total 92% (368 sentencias, 31 no cubiertas).
+Pruebas Docker de reconocimiento: WordPress, Joomla y Laravel correctos; perfilado WordPress ejecutado.
+Este resultado comprueba líneas y comportamientos especificados; no es una medida de precisión sobre sitios de PYMEs.

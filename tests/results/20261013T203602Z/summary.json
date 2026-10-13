@@ -1,0 +1,306 @@
+{
+  "casos": [
+    {
+      "caso": "wordpress-vulnerable",
+      "esperados": [
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF",
+        "SQLI-ERROR-INDICATIVO",
+        "XSS-REFLEJO-INDICATIVO"
+      ],
+      "observados_mayoria": [
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF",
+        "SQLI-ERROR-INDICATIVO",
+        "XSS-REFLEJO-INDICATIVO"
+      ],
+      "observados_por_corrida": [
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ]
+      ]
+    },
+    {
+      "caso": "wordpress-seguro",
+      "esperados": [],
+      "observados_mayoria": [],
+      "observados_por_corrida": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "caso": "wordpress-cms",
+      "esperado": "WordPress",
+      "observado_por_corrida": [
+        "WordPress",
+        "WordPress",
+        "WordPress",
+        "WordPress",
+        "WordPress"
+      ]
+    },
+    {
+      "caso": "joomla-vulnerable",
+      "esperados": [
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF",
+        "SQLI-ERROR-INDICATIVO",
+        "XSS-REFLEJO-INDICATIVO"
+      ],
+      "observados_mayoria": [
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF",
+        "SQLI-ERROR-INDICATIVO",
+        "XSS-REFLEJO-INDICATIVO"
+      ],
+      "observados_por_corrida": [
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ]
+      ]
+    },
+    {
+      "caso": "joomla-seguro",
+      "esperados": [],
+      "observados_mayoria": [],
+      "observados_por_corrida": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "caso": "joomla-cms",
+      "esperado": "Joomla",
+      "observado_por_corrida": [
+        "Joomla",
+        "Joomla",
+        "Joomla",
+        "Joomla",
+        "Joomla"
+      ]
+    },
+    {
+      "caso": "laravel-vulnerable",
+      "esperados": [
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF",
+        "SQLI-ERROR-INDICATIVO",
+        "XSS-REFLEJO-INDICATIVO"
+      ],
+      "observados_mayoria": [
+        "HEADER-CSP",
+        "HEADER-FRAME",
+        "HEADER-NOSNIFF",
+        "SQLI-ERROR-INDICATIVO",
+        "XSS-REFLEJO-INDICATIVO"
+      ],
+      "observados_por_corrida": [
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ],
+        [
+          "HEADER-CSP",
+          "HEADER-FRAME",
+          "HEADER-NOSNIFF",
+          "SQLI-ERROR-INDICATIVO",
+          "XSS-REFLEJO-INDICATIVO"
+        ]
+      ]
+    },
+    {
+      "caso": "laravel-seguro",
+      "esperados": [],
+      "observados_mayoria": [],
+      "observados_por_corrida": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "caso": "laravel-cms",
+      "esperado": "Laravel",
+      "observado_por_corrida": [
+        "Laravel",
+        "Laravel",
+        "Laravel",
+        "Laravel",
+        "Laravel"
+      ]
+    }
+  ],
+  "inestables": [],
+  "confusion_por_codigo": {
+    "XSS-REFLEJO-INDICATIVO": {
+      "VP": 3,
+      "FP": 0,
+      "VN": 3,
+      "FN": 0
+    },
+    "SQLI-ERROR-INDICATIVO": {
+      "VP": 3,
+      "FP": 0,
+      "VN": 3,
+      "FN": 0
+    },
+    "HEADER-CSP": {
+      "VP": 3,
+      "FP": 0,
+      "VN": 3,
+      "FN": 0
+    },
+    "HEADER-FRAME": {
+      "VP": 3,
+      "FP": 0,
+      "VN": 3,
+      "FN": 0
+    },
+    "HEADER-NOSNIFF": {
+      "VP": 3,
+      "FP": 0,
+      "VN": 3,
+      "FN": 0
+    }
+  },
+  "confusion_total": {
+    "VP": 15,
+    "FP": 0,
+    "VN": 15,
+    "FN": 0
+  },
+  "precision": 1.0,
+  "recall": 1.0,
+  "exactitud": 1.0,
+  "cms_correctos": 3,
+  "cms_total": 3,
+  "recursos_por_tipo": {
+    "seguridad": {
+      "duracion_segundos": {
+        "mediana": 0.03728430000046501,
+        "minimo": 0.016698100000212435,
+        "maximo": 0.14476070000091568
+      },
+      "pico_memoria_bytes": {
+        "mediana": 31717376.0,
+        "minimo": 31494144,
+        "maximo": 31891456
+      }
+    },
+    "cms": {
+      "duracion_segundos": {
+        "mediana": 0.08300299999973504,
+        "minimo": 0.025284699997428106,
+        "maximo": 0.14694410000083735
+      },
+      "pico_memoria_bytes": {
+        "mediana": 31916032,
+        "minimo": 31735808,
+        "maximo": 32251904
+      }
+    }
+  },
+  "nota": "Resultados exclusivos de endpoints PHP de laboratorio y páginas base de contenedores; repeticiones no se tratan como casos independientes."
+}

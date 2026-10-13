@@ -1,0 +1,1 @@
+Corrida piloto completa de 45 ejecuciones, antes de incluir `recon` y `cms` en los casos de seguridad y antes de separar los recursos por tipo de caso en el analizador. Se conserva para trazabilidad, pero las cifras del capítulo 6 deben calcularse desde `20261013T191303Z`, que ejecuta el pipeline completo en cada caso de seguridad.
